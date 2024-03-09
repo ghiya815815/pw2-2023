@@ -13,6 +13,6 @@
     <div class="container mt-5">
         <header role="banner">
             <h2>Student Activity Score - STTNF</h2>
-            <a href="">Home</a> | <a href="form_nilai.php">Form Nilai</a> | <a href="">Data Nilai</a> | <a href="">Login</a>
+            <a href="home.php">Home</a> | <a href="form_nilai.php">Form Nilai</a> | <a href="data_nilai.php">Data Nilai</a> | <a href="home.php">Login</a>
             <hr />
         </header>
