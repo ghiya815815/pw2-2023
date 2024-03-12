@@ -47,26 +47,27 @@
           <?php
           require_once 'libfungsi.php';
           
-          // 3. Berikan error handling untuk mengatasi ketika form belum disubmit
+            // Berikan error handling untuk mengatasi ketika form belum disubmit
+            //Form telah disubmit, proses data
+            // Ambil data dari $_POST
           if(isset($_POST['submit'])) {
-              // Form telah disubmit, proses data
-              // Ambil data dari $_POST
               $nama = $_POST["nama"];
               $matkul = $_POST["matkul"];
               $uts = $_POST["uts"];
               $uas = $_POST["uas"];
               $paktek = $_POST["paktek"];
               
+              
               // Hitung rerata
               $rerata = number_format(($uts + $uas + $paktek) / 3, 2);
               
-              // Panggil fungsi untuk menentukan grade
+              // Panggil fungsi untuk menentukan grade A, B, C, atau D :
               $grades = grade($rerata);
               
-              // Panggil fungsi untuk menentukan predikat
+              // Panggil fungsi untuk menentukan predikat kalau A sangat memuaskan kalau E sangat kurang :
               $predikat = predikat($grades);
               
-              // Panggil fungsi untuk menentukan kelulusan
+              // Panggil fungsi untuk menentukan kelulusan Lulus atau Tidak :
               $lulus = kelulusan($rerata);
               
               // Tampilkan data dalam bentuk baris tabel
@@ -83,7 +84,7 @@
               echo "<td>$lulus</td>";
               echo "</tr>";
           } else {
-              // Form belum disubmit, tampilkan pesan
+              // Pesan jika belum submit data
               echo "<tr><td colspan='10'>Form belum di-submit, data akan muncul setelah di-submit.</td></tr>";
           }
           ?>

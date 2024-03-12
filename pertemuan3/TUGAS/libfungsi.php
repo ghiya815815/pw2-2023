@@ -1,9 +1,5 @@
 <?php
-/**
- * Function kelulusan
- * Function grade
- */
-
+ 
 function kelulusan($rerata){
     if ($rerata > 55) {
         return "Lulus";
