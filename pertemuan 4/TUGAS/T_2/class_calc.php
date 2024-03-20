@@ -26,7 +26,7 @@ class Calculator {
         if ($this->angka2 != 0) {
             return $this->angka1 / $this->angka2;
         } else {
-            return "tidak bisa  dibagi dengan 0!";
+            return "tidak bisa dibagi dengan 0!";
         }
     }
     public function kali() {
